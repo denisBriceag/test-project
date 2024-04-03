@@ -1,27 +1,14 @@
-# TestProject
+# Book Search Application
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.3.
+This application allows users to search for books by title and author. It features a dynamic search function that updates the results as the user types.
 
-## Development server
+## Features
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+- **Author Dropdown**: A dropdown menu populated with authors is available. The list of authors is fetched from an API provided by `AppService`.
 
-## Code scaffolding
+- **Dynamic Searching**: When the user types a book title in the search field and selects an author from the dropdown, the application makes a request to the mocked api with the entered title and chosen author. The results are then displayed in a table format.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Testing
+Unit tests for `AppComponent` and `AppService`
 
-## Build
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.

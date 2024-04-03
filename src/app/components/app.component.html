@@ -1,24 +1,32 @@
 <article class="p-6 flex-col">
-  <form>
+  <form class="flex gap-1.5">
     <mat-form-field appearance="outline">
-      <mat-label>Product name</mat-label>
+      <mat-label>Book title</mat-label>
 
-      <input type="text" matInput placeholder="Enter" />
+      <input type="text" matInput placeholder="Title" />
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>Author</mat-label>
+      <mat-select>
+        <!--Populate options with authors-->
+        <mat-option [value]="'Author1'">Author1</mat-option>
+      </mat-select>
     </mat-form-field>
   </form>
 
   <section class="w-2/5">
     <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
-      <!-- Position Column -->
-      <ng-container matColumnDef="id">
-        <th mat-header-cell *matHeaderCellDef>No.</th>
-        <td mat-cell *matCellDef="let element">{{ element.position }}</td>
+      <!-- Title Column -->
+      <ng-container matColumnDef="title">
+        <th mat-header-cell *matHeaderCellDef>Title</th>
+        <td mat-cell *matCellDef="let element">{{ element.title }}</td>
       </ng-container>
 
-      <!-- Name Column -->
-      <ng-container matColumnDef="name">
-        <th mat-header-cell *matHeaderCellDef>Name</th>
-        <td mat-cell *matCellDef="let element">{{ element.name }}</td>
+      <!-- Author Column -->
+      <ng-container matColumnDef="author">
+        <th mat-header-cell *matHeaderCellDef>Author</th>
+        <td mat-cell *matCellDef="let element">{{ element.author }}</td>
       </ng-container>
 
       <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
