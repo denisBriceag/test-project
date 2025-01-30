@@ -1,6 +1,7 @@
 # Book Search Application
 
 This application allows users to search for books by title and author. It features a dynamic search function that updates the results as the user types.
+This application was design by author to test basic angular skills of new job candidates
 
 ## Features
 
